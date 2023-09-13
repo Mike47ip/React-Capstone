@@ -24,7 +24,7 @@ function MinionsList() {
       <ul>
         {minions.map((minion) => (
           <li key={minion.id}>
-            <img src={minion.icon} alt={minion.name} />
+            <img src={minion.image} alt={minion.name} />
             {minion.name.replace('Wind-up', '')}
           </li>
         ))}
