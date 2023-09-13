@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setMinions } from '../features/minionsSlice';
+import { setMinions } from '../redux/features/minionsSlice';
+import '../styles/minionsList.css';
 
 function MinionsList() {
   const dispatch = useDispatch();
@@ -19,17 +20,19 @@ function MinionsList() {
   }, [dispatch]);
 
   return (
-    <div>
+    <>
       <h1>Wind-up Minions</h1>
-      <ul>
+
+      <ul className="minionis">
         {minions.map((minion) => (
-          <li key={minion.id}>
+          <li className="minionProfile" key={minion.id}>
             <img src={minion.image} alt={minion.name} />
             {minion.name.replace('Wind-up', '')}
           </li>
         ))}
       </ul>
-    </div>
+
+    </>
   );
 }
 

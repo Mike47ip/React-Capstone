@@ -3,7 +3,6 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import store from './redux/store';
-// import MinionsList from './components/MinionsList';
 import HomePage from './components/pages/homePage';
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
             path="/"
             element={<HomePage />}
           />
-
         </Routes>
       </BrowserRouter>
     </Provider>
