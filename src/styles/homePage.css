@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px;
+}
+
+section {
+  width: 100%;
+  height: auto;
+
+}
+
+/* .menu {
+  padding-left: 20px;
+}
+
+.search {
+  padding-right: 20px;
+} */
+
+.homeBackground {
+  width: 100vw;
+  height: 1100px;
+  background-image: url('../../src/assets/ffXiv.jpg'); /* Set the path to your background image */
+  background-size: cover; /* Adjust as needed */
+  background-repeat: no-repeat; /* Adjust as needed */
+  background-position: center; /* Adjust as needed */
+}
