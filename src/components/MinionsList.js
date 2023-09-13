@@ -14,7 +14,7 @@ function MinionsList() {
         dispatch(setMinions(data.results));
       })
       .catch((error) => {
-        console.error('There was a problem fetching data:', error);
+        alert.error('There was a problem fetching data:', error);
       });
   }, [dispatch]);
 
