@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import { Provider } from 'react-redux';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import store from './redux/store';
 // import MinionsList from './components/MinionsList';
 import HomePage from './components/pages/homePage';
@@ -8,10 +9,17 @@ import HomePage from './components/pages/homePage';
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
-        <HomePage />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={<HomePage />}
+          />
+
+        </Routes>
+      </BrowserRouter>
     </Provider>
+
   );
 }
 
