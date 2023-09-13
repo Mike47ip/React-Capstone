@@ -7,9 +7,7 @@ const minionsSlice = createSlice({
     minions: [],
   },
   reducers: {
-    setMinions: (state, action) => {
-      state.minions = action.payload;
-    },
+    setMinions: (state, action) => ({ ...state, minions: action.payload }),
   },
 });
 
