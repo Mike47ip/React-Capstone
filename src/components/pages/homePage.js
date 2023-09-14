@@ -44,18 +44,36 @@ function HomePage() {
       <MinionsList onMinionClick={handleMinionClick} />
       {/* Display selected minion details */}
       {selectedMinion && (
-        <div className="selected-minion-details">
+      <div className="selected-minion-details">
+        <article>
           <h1>{selectedMinion.name}</h1>
           <img src={selectedMinion.image} alt={selectedMinion.name} />
-          <p>
-            Description:
+          <span>
+            <strong>Description:</strong>
             {' '}
             {selectedMinion.description}
-          </p>
+          </span>
+          <span>
+            <strong>Tooltip:</strong>
+            {' '}
+            {selectedMinion.tooltip}
+          </span>
+          <span>
+            <strong>Tradeable:</strong>
+            {' '}
+            {selectedMinion.tradeable ? 'Yes' : 'No'}
+          </span>
+
           {/* Add more details here as needed */}
-          <button type="button" onClick={() => setSelectedMinion(null)}>Go Back</button>
-        </div>
+          <button type="button" onClick={() => setSelectedMinion(null)}>
+            Go Back
+          </button>
+
+        </article>
+
+      </div>
       )}
+
     </>
   );
 }
