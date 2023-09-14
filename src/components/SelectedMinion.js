@@ -16,7 +16,7 @@ function SelectedMinion() {
         dispatch(setSelectedMinion(data));
       })
       .catch((error) => {
-        console.error('Error fetching selected minion data:', error);
+        alert.error('Error fetching selected minion data:', error);
       });
   }, [dispatch, id]);
 

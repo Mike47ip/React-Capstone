@@ -8,7 +8,6 @@ function HomePage() {
   const [selectedMinion, setSelectedMinion] = useState(null);
 
   const handleMinionClick = (minion) => {
-    console.log('Selected Minion:', minion);
     setSelectedMinion(minion);
   };
 
