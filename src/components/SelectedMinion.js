@@ -1,42 +1,39 @@
-import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { setSelectedMinion } from '../redux/features/selectedMinionSlice';
+// SelectedMinionDetails.js
 
-function SelectedMinion() {
-  const { id } = useParams(); // Extract the minion ID from the route parameters
-  const dispatch = useDispatch();
-  const selectedMinion = useSelector((state) => state.selectedMinion.selectedMinion);
+import React from 'react';
 
-  useEffect(() => {
-    // Fetch data for the selected minion using the ID
-    fetch(`https://ffxivcollect.com/api/minions/${id}`)
-      .then((response) => response.json())
-      .then((data) => {
-        dispatch(setSelectedMinion(data));
-      })
-      .catch((error) => {
-        alert.error('Error fetching selected minion data:', error);
-      });
-  }, [dispatch, id]);
-
+function SelectedMinionDetails({ selectedMinion, handleGoBack }) {
   return (
-    <div>
-      <h1>Selected Minion Details</h1>
-      {selectedMinion && (
-        <div className="minion-details">
-          <h2>{selectedMinion.name}</h2>
-          <img src={selectedMinion.image} alt={selectedMinion.name} />
-          <p>
-            Description:
-            {' '}
-            {selectedMinion.description}
-          </p>
-          {/* You can add more details here as needed */}
-        </div>
-      )}
+    <div className="selected-minion-details">
+      <article>
+        <span
+          className="material-symbols-outlined go-back-icon"
+          onClick={handleGoBack}
+          role="button"
+          tabIndex={0}
+        >
+          arrow_back
+        </span>
+        <h1>{selectedMinion.name}</h1>
+        <img src={selectedMinion.image} alt={selectedMinion.name} />
+        <span>
+          <strong>Description:</strong>
+          {' '}
+          {selectedMinion.description}
+        </span>
+        <span>
+          <strong>Tooltip:</strong>
+          {' '}
+          {selectedMinion.tooltip}
+        </span>
+        <span>
+          <strong>Tradeable:</strong>
+          {' '}
+          {selectedMinion.tradeable ? 'Yes' : 'No'}
+        </span>
+      </article>
     </div>
   );
 }
 
-export default SelectedMinion;
+export default SelectedMinionDetails;

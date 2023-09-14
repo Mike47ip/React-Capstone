@@ -1,14 +1,21 @@
+// HomePage.js
+
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import '../../styles/homePage.css';
 import { NavLink } from 'react-router-dom';
 import MinionsList from '../MinionsList';
+import SelectedMinionDetails from '../SelectedMinion'; // Import the new component
 
 function HomePage() {
   const [selectedMinion, setSelectedMinion] = useState(null);
 
   const handleMinionClick = (minion) => {
     setSelectedMinion(minion);
+  };
+
+  const handleGoBack = () => {
+    setSelectedMinion(null);
   };
 
   return (
@@ -18,6 +25,7 @@ function HomePage() {
           <Helmet>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
           </Helmet>
           <NavLink to="/">
@@ -29,8 +37,8 @@ function HomePage() {
             stream
           </span>
           <div>
-            <span className="material-symbols-outlined search">
-              search
+            <span className="material-symbols-outlined">
+              keyboard_voice
             </span>
             <span className="material-symbols-outlined">
               settings
@@ -42,38 +50,13 @@ function HomePage() {
         </div>
       </section>
       <MinionsList onMinionClick={handleMinionClick} />
-      {/* Display selected minion details */}
+      {/* Display selected minion details using the new component */}
       {selectedMinion && (
-      <div className="selected-minion-details">
-        <article>
-          <h1>{selectedMinion.name}</h1>
-          <img src={selectedMinion.image} alt={selectedMinion.name} />
-          <span>
-            <strong>Description:</strong>
-            {' '}
-            {selectedMinion.description}
-          </span>
-          <span>
-            <strong>Tooltip:</strong>
-            {' '}
-            {selectedMinion.tooltip}
-          </span>
-          <span>
-            <strong>Tradeable:</strong>
-            {' '}
-            {selectedMinion.tradeable ? 'Yes' : 'No'}
-          </span>
-
-          {/* Add more details here as needed */}
-          <button type="button" onClick={() => setSelectedMinion(null)}>
-            Go Back
-          </button>
-
-        </article>
-
-      </div>
+        <SelectedMinionDetails
+          selectedMinion={selectedMinion}
+          handleGoBack={handleGoBack}
+        />
       )}
-
     </>
   );
 }

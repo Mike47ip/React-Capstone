@@ -2,12 +2,12 @@
 
 import { configureStore } from '@reduxjs/toolkit';
 import minionsReducer from './features/minionsSlice';
-import selectedMinionReducer from './features/selectedMinionSlice'; // Import the new slice
+import selectedMinionReducer from './features/selectedMinionSlice'; // Import the selectedMinionReducer
 
 const store = configureStore({
   reducer: {
     minions: minionsReducer,
-    selectedMinion: selectedMinionReducer, // Add the new slice to the reducers
+    selectedMinion: selectedMinionReducer, // Include the selectedMinionReducer
   },
 });
 

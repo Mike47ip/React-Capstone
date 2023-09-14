@@ -1,9 +1,9 @@
 h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: brown;
-  font-size: 50px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: brown;
+ font-size: 50px;
 }
 
 .minionsCont {
@@ -13,12 +13,12 @@ h1 {
 }
 
 .minionis {
+ cursor: pointer;
  list-style: none;
  display: grid;
  grid-template-columns: auto auto auto auto auto auto;
  justify-content: center;
 }
-
 
 .minionProfile {
  display: flex;
@@ -31,10 +31,9 @@ h1 {
 }
 
 .minionProfile:hover {
-  transform: scale(1.1);
+ transform: scale(1.1);
 }
 
 .minionProfile img {
-  max-width: 100%;
+ max-width: 100%;
 }
-
