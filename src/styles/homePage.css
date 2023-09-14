@@ -7,35 +7,31 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 15px;
 }
 
 section {
   width: 100%;
   height: auto;
-
 }
 
-/* .menu {
-  padding-left: 20px;
-}
-
-.search {
-  padding-right: 20px;
-} */
 
 .homeBackground {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
   width: 100vw;
   height: 1100px;
-  background-image: url('../../src/assets/ffXiv.jpg'); /* Set the path to your background image */
-  background-size: cover; /* Adjust as needed */
-  background-repeat: no-repeat; /* Adjust as needed */
-  background-position: center; /* Adjust as needed */
+  background-image: url('../../src/assets/ffXiv.jpg'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
 }
 
 
-/* In your CSS file (e.g., styles.css) */
+
 .selected-minion-details {
   position: fixed;
   top: 50%;
@@ -44,5 +40,5 @@ section {
   background-color: white;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000; /* Adjust as needed to ensure it's above other elements */
+  z-index: 1000; 
 }
