@@ -1,0 +1,14 @@
+/* detailsPage.css */
+
+.minion-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.minion-details {
+  text-align: center;
+  padding-top: 1%;
+}
