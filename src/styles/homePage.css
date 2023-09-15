@@ -51,3 +51,7 @@ article {
   justify-content: flex-start;
   align-items: flex-start;
 }
+
+.go-back-icon {
+  cursor: pointer;
+}

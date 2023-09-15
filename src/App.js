@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import store from './redux/store';
 import HomePage from './components/pages/homePage';
-// import SelectedMinion from './components/SelectedMinion';
+import MinionDetailsPage from './components/MinionDetailsPage';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          {/* <Route path="/minion/:id" element={<SelectedMinion />} /> */}
+          <Route path="/minion/:minionId" element={<MinionDetailsPage />} />
         </Routes>
       </BrowserRouter>
     </Provider>

@@ -37,3 +37,35 @@ h1 {
 .minionProfile img {
  max-width: 100%;
 }
+
+/* minionsList.css */
+
+/* Style the search bar container */
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  background-color: #f7f7f7; /* Background color */
+  padding: 8px; /* Adjust padding as needed */
+  border-radius: 4px; /* Rounded corners */
+  margin-bottom: 16px; /* Add spacing between search bar and minions list */
+  width: 30%; /* Set the width to 50% */
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Search input field */
+.search-bar input {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Search icon */
+.search-icon {
+  font-size: 24px;
+  margin-right: 8px; /* Spacing between input and icon */
+  color: #333; /* Icon color */
+}
+
