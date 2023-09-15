@@ -48,7 +48,7 @@ h1 {
   background-color: #f7f7f7; /* Background color */
   padding: 8px; /* Adjust padding as needed */
   border-radius: 4px; /* Rounded corners */
-  margin: 0 auto; /* Center horizontally */
+  margin: auto; /* Center horizontally */
   margin-bottom: 16px; /* Add spacing between search bar and minions list */
   width: 30%; /* Set the width to 50% */
 }
