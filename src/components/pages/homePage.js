@@ -9,6 +9,7 @@ import SelectedMinionDetails from '../SelectedMinion'; // Import the new compone
 
 function HomePage() {
   const [selectedMinion, setSelectedMinion] = useState(null);
+  const [searchQuery] = useState('');
 
   const handleMinionClick = (minion) => {
     setSelectedMinion(minion);
@@ -23,11 +24,26 @@ function HomePage() {
       <section>
         <nav>
           <Helmet>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+            />
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+            />
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+            />
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+            />
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+            />
           </Helmet>
           <NavLink to="/">
             <span className="material-symbols-outlined">
@@ -50,8 +66,7 @@ function HomePage() {
           hello
         </div>
       </section>
-      <MinionsList onMinionClick={handleMinionClick} />
-      {/* Display selected minion details using the new component */}
+      <MinionsList onMinionClick={handleMinionClick} searchQuery={searchQuery} />
       {selectedMinion && (
         <SelectedMinionDetails
           selectedMinion={selectedMinion}
