@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';

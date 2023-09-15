@@ -1,13 +1,11 @@
-// redux/store.js
-
 import { configureStore } from '@reduxjs/toolkit';
 import minionsReducer from './features/minionsSlice';
-import selectedMinionReducer from './features/selectedMinionSlice'; // Import the selectedMinionReducer
+import minionDetailsReducer from './features/minionDetailsSlice'; // Import the minionDetailsReducer
 
 const store = configureStore({
   reducer: {
     minions: minionsReducer,
-    selectedMinion: selectedMinionReducer, // Include the selectedMinionReducer
+    minionDetails: minionDetailsReducer, // Include the minionDetailsReducer
   },
 });
 
