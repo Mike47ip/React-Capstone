@@ -15,7 +15,6 @@ section {
   height: auto;
 }
 
-
 .homeBackground {
   display: block;
   justify-content: center;
@@ -24,10 +23,10 @@ section {
   font-size: 30px;
   width: 100vw;
   height: 1100px;
-  background-image: url('../../src/assets/ffXiv.jpg'); 
-  background-size: cover; 
-  background-repeat: no-repeat; 
-  background-position: center; 
+  background-image: url('../../src/assets/ffXiv.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* In your CSS file (e.g., styles.css) */

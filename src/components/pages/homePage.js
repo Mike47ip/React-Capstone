@@ -5,7 +5,6 @@ import { Helmet } from 'react-helmet';
 import '../../styles/homePage.css';
 import { NavLink } from 'react-router-dom';
 import MinionsList from '../MinionsList';
-import SelectedMinionDetails from '../SelectedMinion'; // Import the new component
 
 function HomePage() {
   const [selectedMinion, setSelectedMinion] = useState(null);
