@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -6,7 +7,9 @@ import '../styles/detailsPage.css';
 
 function MinionDetailsPage() {
   const { minionId } = useParams();
-  const selectedMinion = useSelector((state) => state.minions.minions.find((minion) => minion.id === parseInt(minionId)));
+  const selectedMinion = useSelector((state) =>
+   state.minions.minions.find((minion) => minion.id === parseInt(minionId))
+  );
 
   if (!selectedMinion) {
     return <div>Minion not found</div>;

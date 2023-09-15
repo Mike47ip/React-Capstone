@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { setMinions } from '../redux/features/minionsSlice';
 import '../styles/minionsList.css';
@@ -27,7 +26,9 @@ function MinionsList() {
   };
 
   // Function to filter minions based on the search query
-  const filteredMinions = minions.filter((minion) => minion.name.toLowerCase().includes(searchQuery.toLowerCase()));
+  const filteredMinions = minions.filter((minion) =>
+   minion.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <>
@@ -56,9 +57,5 @@ function MinionsList() {
     </>
   );
 }
-
-MinionsList.propTypes = {
-  onMinionClick: PropTypes.func.isRequired,
-};
 
 export default MinionsList;
