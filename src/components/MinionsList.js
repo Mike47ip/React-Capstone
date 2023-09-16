@@ -8,15 +8,18 @@ function MinionsList() {
   const dispatch = useDispatch();
   const minions = useSelector((state) => state.minions.minions);
   const [searchQuery, setSearchQuery] = useState('');
+  const [loading, setLoading] = useState(true); // Track loading state
 
   useEffect(() => {
     fetch('https://ffxivcollect.com/api/minions?name_en_start=wind-up')
       .then((response) => response.json())
       .then((data) => {
         dispatch(setMinions(data.results));
+        setLoading(false); // Set loading to false when data is fetched
       })
       .catch((error) => {
         alert.error('There was a problem fetching data:', error);
+        setLoading(false); // Set loading to false on error as well
       });
   }, [dispatch]);
 
@@ -27,7 +30,7 @@ function MinionsList() {
 
   // Function to filter minions based on the search query
   const filteredMinions = minions.filter((minion) =>
-   minion.name.toLowerCase().includes(searchQuery.toLowerCase())
+    minion.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
@@ -44,16 +47,22 @@ function MinionsList() {
         />
         <span className="material-symbols-outlined search-icon">search</span>
       </div>
-      <ul className="minionis">
-        {filteredMinions.map((minion) => (
-          <li key={minion.id}>
-            <NavLink to={`/minion/${minion.id}`} className="minionProfile">
-              <img src={minion.image} alt={minion.name} />
-              {minion.name.replace('Wind-up', '')}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
+
+      {loading ? (
+        // Display a loading message while data is loading
+        <p><strong>Loading...</strong></p>
+      ) : (
+        <ul className="minionis">
+          {filteredMinions.map((minion) => (
+            <li key={minion.id}>
+              <NavLink to={`/minion/${minion.id}`} className="minionProfile">
+                <img src={minion.image} alt={minion.name} />
+                {minion.name.replace('Wind-up', '')}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      )}
     </>
   );
 }
