@@ -34,9 +34,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Disney Characters] <a name="about-project"></a>
+# 📖 [React-Capstone] <a name="about-project"></a>
 
-This is a web application that displays a list of disney featured characters. Each character has a designated profile that showcase its name and list features on the big screen including films and videogames.
+This is a web application that displays a list of Final Fantasy featured characters. Each character has a designated profile that showcase its name and list features on the big screen including films and videogames.
 
 ## 🛠 Built With <a name="built-with"></a>
 
