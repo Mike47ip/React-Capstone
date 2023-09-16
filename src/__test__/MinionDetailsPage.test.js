@@ -1,16 +1,20 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import { MemoryRouter } from 'react-router-dom';
-import MinionDetailsPage from '../components/MinionDetailsPage';
+import { BrowserRouter } from 'react-router-dom';
 import store from '../redux/store';
+import MinionDetailsPage from '../components/MinionDetailsPage';
 
-test('renders Missions component without errors', () => {
-  render(
-    <MemoryRouter>
+describe('Test if details page renders correctly', () => {
+  test('Test if details page renders correctly', () => {
+    const Tree = renderer.create(
       <Provider store={store}>
-        <MinionDetailsPage />
-      </Provider>
-    </MemoryRouter>,
-  );
+        <BrowserRouter>
+          <MinionDetailsPage />
+        </BrowserRouter>
+      </Provider>,
+    );
+    expect(Tree).toMatchSnapshot();
+  });
 });

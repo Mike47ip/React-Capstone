@@ -74,16 +74,16 @@ h1 {
   .minionis {
     grid-template-columns: auto auto auto auto auto;
   }
-} 
+}
 
 @media screen and (max-width: 555px) {
   .minionis {
     grid-template-columns: auto auto auto auto;
   }
-} 
+}
 
 @media screen and (max-width: 436px) {
   .minionis {
     grid-template-columns: auto auto auto;
   }
-} 
+}
