@@ -62,7 +62,7 @@ This is a web application that displays a list of Final Fantasy featured charact
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Go live](https://react-capstone-jigtfoqpn-mike47ip.vercel.app)
+- [Go live](https://react-capstone-d.onrender.com/)
 
 <!-- VIDEO PRESENTATION -->
 
