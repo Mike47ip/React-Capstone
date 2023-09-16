@@ -68,7 +68,7 @@ This is a web application that displays a list of Final Fantasy featured charact
 
 ## Video Presentation <a name="live-demo"></a>
 
-- [Video Presentation](https://www.loom.com/share/435d81a4c52f47c59ddf6e9dd03ea142)
+- [Video Presentation](https://www.loom.com/share/509e25c945954583825f0c247f0826ef)
 
 <!-- GETTING STARTED -->
 
