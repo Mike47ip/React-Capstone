@@ -177,6 +177,8 @@ If you like this project give it a **STAR**
 I would like to special thanks to:
 - All Micronauts
 - Standup Team
+- [Abel Tsegaye](https://github.com/abeltsew)
+- Nelson Sakwa for the [design](https://www.behance.net/gallery/31579789/Ballhead-App-%28Free-PSDs%29)
 
 
 <!-- LICENSE -->
