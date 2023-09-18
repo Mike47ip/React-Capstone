@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test if details page renders correctly Test if details page renders correctly 1`] = `
+<div>
+  Minion not found
+</div>
+`;
+
+exports[`Test if details page renders correctly Test if navBar renders correctly 1`] = `
+<div>
+  Minion not found
+</div>
+`;
+
+exports[`Test if details renders correctly Test if navBar renders correctly 1`] = `
+<div>
+  Minion not found
+</div>
+`;
+
+exports[`Test if navBar renders correctly Test if navBar renders correctly 1`] = `
+<div>
+  Minion not found
+</div>
+`;

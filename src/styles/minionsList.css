@@ -1,0 +1,89 @@
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: brown;
+  font-size: 50px;
+}
+
+.minionsCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.minionis {
+  cursor: pointer;
+  list-style: none;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  justify-content: center;
+  padding: 0;
+}
+
+.minionProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  transition: transform 0.3s;
+}
+
+.minionProfile:hover {
+  transform: scale(1.1);
+}
+
+.minionProfile img {
+  max-width: 100%;
+}
+
+/* minionsList.css */
+
+/* Style the search bar container */
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  background-color: #f7f7f7; /* Background color */
+  padding: 8px; /* Adjust padding as needed */
+  border-radius: 4px; /* Rounded corners */
+  margin: auto; /* Center horizontally */
+  margin-bottom: 16px; /* Add spacing between search bar and minions list */
+  width: 30%; /* Set the width to 50% */
+}
+
+/* Search input field */
+.search-bar input {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Search icon */
+.search-icon {
+  font-size: 24px;
+  margin-right: 8px; /* Spacing between input and icon */
+  color: #333; /* Icon color */
+}
+
+@media screen and (max-width: 665px) {
+  .minionis {
+    grid-template-columns: auto auto auto auto auto;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .minionis {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media screen and (max-width: 436px) {
+  .minionis {
+    grid-template-columns: auto auto auto;
+  }
+}
